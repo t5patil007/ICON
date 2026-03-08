@@ -508,6 +508,10 @@ class Unet(nn.Module):
         else:
             """Standard forward"""
             enc_feats = []
+            if y is not None:
+                input = torch.cat([x, y], dim=1)
+            else:
+                input = x
             feat = input
             for layer_id, layer in enumerate(self.model):
                 # print(layer_id, layer.__class__.__name__)
