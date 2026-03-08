@@ -444,8 +444,13 @@ class Unet(nn.Module):
             model += [FinalActivation]
         self.model = nn.Sequential(*model)
 
-    def forward(self, input, layers=[], encode_only=False, verbose=False):
+    def forward(self, x, y=None, layers=[], encode_only=False, verbose=False):
         if len(layers) > 0:
+            # concatenate inputs if two tensors are provided
+            if y is not None:
+                input = torch.cat([x, y], dim=1)
+            else:
+                input = x
             feat = input
             feats = []
             enc_feats = []
