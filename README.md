@@ -1,7 +1,7 @@
 ![Demo figure](notebooks/paper_figures/Intro_NewLabels-2.png)
 
 
-# ICON: Learning Regular Maps through Inverse Consistency
+# A Modified Version of "ICON: Learning Regular Maps through Inverse Consistency" to support a custom registration model backbone
 
 [<img src="https://github.com/uncbiag/ICON/actions/workflows/test-action.yml/badge.svg">](https://github.com/uncbiag/ICON/actions)
 [<img src="https://img.shields.io/pypi/v/icon_registration.svg?color=blue">](https://pypi.org/project/icon-registration)
